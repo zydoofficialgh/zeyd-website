@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Zaid Sidna Mohamed — Engineering Student Portfolio">
+<title>Zaid Sidna Mohamed | Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{primary:'#10b981',accent:'#f59e0b',ink:'#0a0e1a',card:'#111827'},fontFamily:{cairo:['Cairo','sans-serif'],inter:['Inter','sans-serif']}}}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-ink text-slate-200 font-cairo antialiased">
+
+<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+  <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+</div>
+
+<!-- NAV -->
+<nav class="fixed top-0 inset-x-0 z-40 backdrop-blur-xl bg-ink/80 border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a href="#home" class="font-extrabold text-lg tracking-tight">
+      <span class="text-primary">Z</span><span>aid.</span>
+    </a>
+    <div class="hidden md:flex items-center gap-6 text-sm">
+      <a href="#about" data-i18n="navAbout" class="hover:text-primary transition"></a>
+      <a href="#education" data-i18n="navEducation" class="hover:text-primary transition"></a>
+      <a href="#experience" data-i18n="navExperience" class="hover:text-primary transition"></a>
+      <a href="#personal" data-i18n="navPersonal" class="hover:text-primary transition"></a>
+      <a href="#gallery" data-i18n="navGallery" class="hover:text-primary transition"></a>
+      <a href="#contact" data-i18n="navContact" class="hover:text-primary transition"></a>
+    </div>
+    <div class="flex items-center gap-2">
+      <button id="lang-btn" class="px-3 py-1.5 text-xs font-bold rounded-lg border border-white/10 hover:border-primary hover:text-primary transition">EN</button>
+      <button id="menu-btn" class="md:hidden p-2 text-xl">☰</button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-1 text-sm"></div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center pt-16">
+  <div class="max-w-6xl mx-auto px-6 w-full">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="animate-slide-up">
+        <div id="status-badge" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-6"></div>
+        <h1 class="text-4xl sm:text-6xl font-black leading-tight mb-4">
+          <span id="hero-name"></span>
+        </h1>
+        <p id="hero-title" class="text-lg sm:text-xl text-primary font-semibold mb-3"></p>
+        <p id="hero-univ" class="text-slate-400 mb-8 text-sm sm:text-base"></p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#about" data-i18n="heroCta1" class="px-6 py-3 bg-primary text-ink font-bold rounded-xl hover:bg-primary/90 transition"></a>
+          <a href="#contact" data-i18n="heroCta2" class="px-6 py-3 border border-white/15 rounded-xl hover:border-accent hover:text-accent transition"></a>
+        </div>
+      </div>
+      <div class="relative flex justify-center animate-fade-in">
+        <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-gradient-to-br from-primary/30 to-accent/30 p-1 rotate-3 hover:rotate-0 transition-transform duration-500">
+          <div id="hero-avatar" class="w-full h-full rounded-3xl bg-card flex items-center justify-center text-6xl font-black text-primary overflow-hidden"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 data-i18n="navAbout" class="text-3xl sm:text-4xl font-extrabold mb-2"></h2>
+    <div class="w-16 h-1 bg-primary rounded mb-10"></div>
+    <div id="about-content" class="grid md:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="py-20 bg-card/30">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 data-i18n="navEducation" class="text-3xl sm:text-4xl font-extrabold mb-2"></h2>
+    <div class="w-16 h-1 bg-accent rounded mb-10"></div>
+    <div id="education-content" class="space-y-4"></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 data-i18n="navExperience" class="text-3xl sm:text-4xl font-extrabold mb-2"></h2>
+    <div class="w-16 h-1 bg-primary rounded mb-10"></div>
+    <div id="experience-content" class="space-y-4"></div>
+  </div>
+</section>
+
+<!-- PERSONAL -->
+<section id="personal" class="py-20 bg-card/30">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 data-i18n="navPersonal" class="text-3xl sm:text-4xl font-extrabold mb-2"></h2>
+    <div class="w-16 h-1 bg-accent rounded mb-10"></div>
+    <div id="personal-content" class="grid md:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- ADVICE -->
+<section id="advice" class="py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 data-i18n="navAdvice" class="text-3xl sm:text-4xl font-extrabold mb-2"></h2>
+    <div class="w-16 h-1 bg-primary rounded mb-10"></div>
+    <div id="advice-content" class="grid md:grid-cols-2 gap-4"></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="py-20 bg-card/30">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 data-i18n="navGallery" class="text-3xl sm:text-4xl font-extrabold mb-2"></h2>
+    <div class="w-16 h-1 bg-accent rounded mb-6"></div>
+    <div id="gallery-filters" class="flex flex-wrap gap-2 mb-8"></div>
+    <div id="gallery-content" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 data-i18n="navContact" class="text-3xl sm:text-4xl font-extrabold mb-2"></h2>
+    <div class="w-16 h-1 bg-primary rounded mb-6 mx-auto"></div>
+    <p data-i18n="contactSub" class="text-slate-400 mb-10"></p>
+    <div id="contact-content" class="grid sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
+  </div>
+</section>
+
+<footer class="border-t border-white/5 py-8 text-center text-sm text-slate-500">
+  <p><span data-i18n="footerMade"></span> <span class="text-primary">♥</span> — <span id="footer-year"></span></p>
+</footer>
+
+<!-- CHATBOT -->
+<button id="chat-toggle" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-primary text-ink shadow-lg shadow-primary/40 flex items-center justify-center text-2xl hover:scale-110 transition">💬</button>
+<div id="chat-panel" class="hidden fixed bottom-24 right-6 z-50 w-[calc(100vw-3rem)] sm:w-96 h-[500px] max-h-[70vh] bg-card rounded-2xl border border-white/10 shadow-2xl flex flex-col overflow-hidden">
+  <div class="p-4 bg-primary/10 border-b border-white/5 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+      <span class="font-bold text-sm" data-i18n="chatTitle"></span>
+    </div>
+    <button id="chat-close" class="text-slate-400 hover:text-white text-lg">✕</button>
+  </div>
+  <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 text-sm"></div>
+  <form id="chat-form" class="p-3 border-t border-white/5 flex gap-2">
+    <input id="chat-input" data-i18n-placeholder="chatPlaceholder" class="flex-1 bg-ink/50 border border-white/10 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-primary">
+    <button type="submit" class="px-4 py-2 bg-primary text-ink rounded-lg font-bold">→</button>
+  </form>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="hidden fixed inset-0 z-50 bg-black/95 backdrop-blur flex items-center justify-center p-4">
+  <button id="lightbox-close" class="absolute top-4 right-4 text-white text-3xl">✕</button>
+  <img id="lightbox-img" class="max-w-full max-h-full rounded-xl" src="" alt="">
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
